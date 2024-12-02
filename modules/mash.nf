@@ -13,7 +13,7 @@ process runMash {
 
   script:
    """
-   perl /usr/bin/runMash.pl --input $fasta --bestRepFasta $bestRep
+   perl /usr/bin/runMash.pl --inputDir . --bestRepFasta $bestRep
    """
 }
 

@@ -6,7 +6,7 @@ nextflow.enable.dsl=2
 //---------------------------------------------------------------
 
 if(params.inputDir) {
-  fastas_qch = Channel.fromPath([params.inputDir + '/OG*.fasta'])
+  fastas_qch = Channel.fromPath([params.inputDir + '/OG*.fasta']).collate(2000)
 }
 else {
   throw new Exception("Missing params.inputDir")
